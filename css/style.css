@@ -1,0 +1,78 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+	font-size:18px;
+}
+/* damos tamaño y centramos  el muro donde irá colocada la galería */
+.galeriacervantes{
+background:#8097B8 ;
+background-image:url('../img/click.svg');
+	background-size:50%;
+	background-position:center;
+	background-repeat:no-repeat;
+margin:0 auto;
+width:70%;
+}
+/* definimos la parte  de miniaturas y la parte de foto ampliada*/
+.zonaminiaturas{
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+background:#8097B8 ;
+display:inline-block;
+padding:1em;
+width:25%;
+}
+.zonaampliaciones{
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+background:#2F5D9F ;
+display:inline-block;
+padding:1em;
+width:74%;
+}
+/* Colocamos las miniaturas en la parte izquierda*/
+.miniatura {
+display:inline-block;
+vertical-align:center;
+width:48%;
+}
+.miniatura img{
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+width:100%;
+
+}
+div[id^="foto"]{
+display:none;
+ transition: all 2s ease-in-out;
+}
+/* Aquí las colocamos donde queremos que vayan*/
+.ampliacion {
+width:100%;
+}
+.ampliacion img{
+width:100%;
+}
+/* Aquí las hacemos aparecer mediante la pseudoclase target*/
+div[id^="foto"]:target{
+display:inline;
+animation:opacidad 5s;/*Aplicamos la  animación de fadeIN definida abajo*/
+-webkit-animation:opacidad 5s; /* Safari and Chrome */
+}
+/* definimos la animacion opacidad */
+@keyframes opacidad
+{
+from {opacity:0;}
+to {opacity:1;}
+}
+
+@-webkit-keyframes opacidad /* Safari and Chrome */
+{
+from {opacity:0;}
+to {opacity:1;}
+}
+
